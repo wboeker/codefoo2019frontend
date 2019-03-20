@@ -17,13 +17,8 @@ class News extends Component{
       return(
         <div>
           <div>
-            {this.state.data.map(function(d, idx){
-               return (<li key={idx}>{d.name}</li>)
-             })}
-          </div>
-          <div>
             {this.state.articles.map(function(d, idx){
-               return (<li key={idx}>{d.name}</li>)
+               return (<div key={idx}>{d.name}</div>)
              })}
           </div>
         </div>

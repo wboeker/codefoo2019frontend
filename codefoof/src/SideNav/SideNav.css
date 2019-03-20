@@ -1,0 +1,21 @@
+.sidebar{
+  float:left;
+  margin-left:5%;
+  width:20%;
+  height: 150px;
+  background-color: blue;
+}
+
+.latestBox{
+  height:50px;
+  background-color: black;
+}
+
+.videosBox{
+  height:50px;
+}
+
+.articlesBox{
+  height:50px;
+  background-color: black;
+}
