@@ -1,9 +1,8 @@
 .wrap{
-  height: 150px;
-  width:78%;
-  margin-left: 25%;
+  height: 130px;
+  width:100%;
   display: inline-block;
-  float: right;
+  float: left;
 }
 
 .articleBox {

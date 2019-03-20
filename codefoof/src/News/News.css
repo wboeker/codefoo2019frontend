@@ -1,5 +1,12 @@
 .newsBox {
   display: inline-block;
   height: 100%;
+  width: 65%;
+  float: left;
+  position: relative;
+}
+
+.listContainer {
+  height: 100%;
   width: 100%;
 }

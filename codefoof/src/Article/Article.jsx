@@ -12,8 +12,6 @@ class Article extends Component{
             </div>
             <div className="textBox">
               <div className="topRight">time and number of comments</div>
-              <br/>
-              <div className="bodyText">Insert Headline</div>
             </div>
             <hr/>
           </div>

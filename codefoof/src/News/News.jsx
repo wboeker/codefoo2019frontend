@@ -17,7 +17,7 @@ class News extends Component{
   render(props){
       return(
         <div className="newsBox">
-          <div>
+          <div className="listContainer">
             {this.state.articles.map(function(d, idx){
                return (<div key={idx}>{d.name}</div>)
              })}
