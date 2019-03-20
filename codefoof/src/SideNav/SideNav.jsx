@@ -3,8 +3,13 @@ import './SideNav.css';
 import PropTypes from 'prop-types';
 
 class SideNav extends Component{
+  constructor(props){
+    super(props);
+    this.helper = this.helper.bind(this);
+  }
+
   helper(){
-    alert("infunction");
+    this.props.test();
   }
 
   render(props){

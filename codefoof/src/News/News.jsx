@@ -11,6 +11,9 @@ class News extends Component{
       //array of articles
       articles: [{"name":<Article/>}, {"name":<Article/>}, {"name":<Article/>}],
       data: [{"name":"test1"},{"name":"test2"}],
+      timeStamp: "timeStamp",
+      title: "title",
+      numComments: "4",
     }
   }
 
@@ -21,6 +24,8 @@ class News extends Component{
             {this.state.articles.map(function(d, idx){
                return (<div key={idx}>{d.name}</div>)
              })}
+             <Article image={this.state.test} time={this.state.timeStamp}
+             title={this.state.title} numComments={this.state.numComments}/>
           </div>
         </div>
       )

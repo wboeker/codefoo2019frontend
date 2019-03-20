@@ -7,11 +7,15 @@ import './App.css';
 
 class App extends Component {
 
+  test() {
+    alert("test");
+  }
+
   render() {
     return (
       <div className="App">
         <Header/>
-        <SideNav/>
+        <SideNav test={this.test}/>
         <News/>
       </div>
     );
