@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './News.css';
 import PropTypes from 'prop-types';
 import Article from '../Article/Article';
+import SideNav from '../SideNav/SideNav';
 
 class News extends Component{
   constructor(props){

@@ -13,12 +13,12 @@ class SideNav extends Component{
           <button className="latestBox" onClick={this.helper}>
             <p className="navButton">Latest</p>
           </button>
-          <div className="videosBox" onClick={this.helper}>
+          <button className="videosBox" onClick={this.helper}>
             <p className="navButton">Videos</p>
-          </div>
-          <div className="articlesBox" onClick={this.helper}>
+          </button>
+          <button className="articlesBox" onClick={this.helper}>
             <p className="navButton">Articles</p>
-          </div>
+          </button>
         </div>
       )
   }
