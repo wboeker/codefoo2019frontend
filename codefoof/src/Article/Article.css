@@ -1,0 +1,32 @@
+.articleBox {
+  height: 100px;
+  width: 100%;
+  position:absolute;
+  margin-bottom: 100px;
+  padding:10px 10px 38px 34px;
+}
+
+.pictureBox {
+  height: 100px;
+  width: 50%;
+  background-color: red;
+  display: inline-block;
+}
+
+.textBox {
+  height: 100px;
+  width: 50%;
+  display: inline-block;
+  background-color: green;
+}
+
+.topRight {
+  position: relative;
+  float: left;
+  margin-left: 5%;
+}
+
+.bodyText {
+  float:left;
+  margin-left: 5%;
+}

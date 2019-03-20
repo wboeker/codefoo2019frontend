@@ -5,7 +5,18 @@ import PropTypes from 'prop-types';
 class Article extends Component{
 
   render(props){
-      return(<p>Article</p>)
+      return(
+        <div className="articleBox">
+          <div className="pictureBox">
+          </div>
+          <div className="textBox">
+            <div className="topRight">time and number of comments</div>
+            <br/>
+            <div className="bodyText">Insert Headline</div>
+          </div>
+          <hr/>
+        </div>
+      )
   }
 }
 

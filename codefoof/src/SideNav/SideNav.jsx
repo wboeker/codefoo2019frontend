@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import './SideNav.css';
 import PropTypes from 'prop-types';
+// import { SideNav, Nav } from 'react-sidenav'
 
-class SideNav extends Component{
-
+class SideNavbar extends Component{
   render(props){
-      return(<p>SideNav</p>)
+      return(
+        <p>Sidenav</p>
+      )
   }
 }
 
-export default SideNav;
+export default SideNavbar;

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import News from './News/News';
-import SideNav from './SideNav/SideNav';
-import Article from './Article/Article';
+import SideNavbar from './SideNav/SideNav';
 import logo from './logo.svg';
 import './App.css';
 
@@ -11,9 +10,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
+        <SideNavbar/>
         <News/>
-        <SideNav/>
-        <Article/>
       </div>
     );
   }
