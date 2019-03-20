@@ -10,13 +10,13 @@ class SideNav extends Component{
   render(props){
       return(
         <div className="sidebar">
-          <button className="latestBox" onClick="helper()">
+          <button className="latestBox" onClick={this.helper}>
             <p className="navButton">Latest</p>
           </button>
-          <div className="videosBox">
+          <div className="videosBox" onClick={this.helper}>
             <p className="navButton">Videos</p>
           </div>
-          <div className="articlesBox">
+          <div className="articlesBox" onClick={this.helper}>
             <p className="navButton">Articles</p>
           </div>
         </div>
