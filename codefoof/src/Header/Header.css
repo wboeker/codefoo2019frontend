@@ -1,0 +1,10 @@
+h1 {
+  text-align: left;
+  margin-left: 5%;
+  margin-bottom: 5px;
+}
+
+hr {
+  width: 90%;
+  border: 1.5px solid #EAEAEA;
+}
