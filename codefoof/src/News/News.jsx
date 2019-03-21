@@ -7,6 +7,8 @@ import SideNav from '../SideNav/SideNav';
 class News extends Component{
   constructor(props){
     super(props);
+    this.videosVisible = props.videosVisible;
+
     this.state = {
       //array of articles
       articles: [{"name":<Article/>}, {"name":<Article/>}, {"name":<Article/>}],

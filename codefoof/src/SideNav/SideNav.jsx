@@ -9,7 +9,7 @@ class SideNav extends Component{
   }
 
   helper(){
-    this.props.test();
+    this.props.filterArticles();
   }
 
   render(props){
