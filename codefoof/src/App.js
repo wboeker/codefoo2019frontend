@@ -21,12 +21,16 @@ class App extends Component {
 
   componentDidMount() {
   fetch(URL, {method: "GET"})
-    .then(res => res.text())          // convert to plain text
-    .then(text => alert(text))  // then log it out
-    // .then(response => response.json())
-    // .then(data => this.setState({ articles: data.data }));
+    .then(response => response.json())
+    .then(data => this.setState({ articles: data.data }));
+    // .then(res => res.text())          // convert to plain text
+    // .then(text => alert(text))  // then log it out
     // fetch(URL, {mode:"no-cors"})
   }
+
+  // shouldComponentUpdate(nextProps, nextState){
+  //    return ((this.state.articles !== nextState.articles) || (this.state.videosVisible !== nextState.videosVisible));
+  //  }
 
   filterArticles() {
     // this.setState({
@@ -48,7 +52,7 @@ class App extends Component {
           </ul>
           <Header/>
           <SideNav filterArticles={this.filterArticles}/>
-          <News videosVisible={this.state.videosVisible}/>
+          <News videosVisible={this.state.videosVisible} articleList={this.state.articles}/>
         </div>
       );
     }

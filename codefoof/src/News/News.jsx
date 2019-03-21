@@ -8,10 +8,9 @@ class News extends Component{
   constructor(props){
     super(props);
     this.videosVisible = props.videosVisible;
+    this.articleList = props.articleList;
 
     this.state = {
-      //array of articles
-      articles: [{"name":<Article/>}, {"name":<Article/>}, {"name":<Article/>}],
       data: [{"name":"test1"},{"name":"test2"}],
       timeStamp: "timeStamp",
       title: "title",
@@ -21,15 +20,12 @@ class News extends Component{
 
   render(props){
       return(
-        <div className="newsBox">
-          <div className="listContainer">
-            {this.state.articles.map(function(d, idx){
-               return (<div key={idx}>{d.name}</div>)
-             })}
-             <Article image={this.state.test} time={this.state.timeStamp}
-             title={this.state.title} numComments={this.state.numComments}/>
-          </div>
-        </div>
+            <div className="newsBox">
+              <div className="listContainer">
+                 <Article image={this.state.test} time={this.state.timeStamp}
+                 title={this.articleList} numComments={this.state.numComments}/>
+              </div>
+            </div>
       )
   }
 }
