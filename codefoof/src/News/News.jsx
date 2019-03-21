@@ -5,7 +5,7 @@ import Article from '../Article/Article';
 import SideNav from '../SideNav/SideNav';
 
 const URL = '/content?startIndex=0&count=20';
-const COMMENT_URL = 'comments?ids=3de45473c5662f25453551a2e1cb4e6e,63a71f01cca67c9bbf5e7b6f091d551d';
+const COMMENT_URL = 'comments?ids=';
 
 class News extends Component{
   constructor(props){
@@ -33,8 +33,21 @@ class News extends Component{
         .catch(error => console.log(error));
   }
 
+  createListId() {
+    const {articles} = this.state;
+    const newList = [];
+    articles.map(article => newList.push(article.contentId));
+    var strId = "3de45473c5662f25453551a2e1cb4e6e,63a71f01cca67c9bbf5e7b6f091d551d";
+    var index;
+    for (index = 0; index < newList.length; index++) {
+      console.log(newList[index]);
+    }
+    return strId;
+  }
+
   fetchComments(){
-    return fetch(COMMENT_URL, {method: "GET"})
+    var withID = COMMENT_URL + this.createListId();
+    return fetch(withID, {method: "GET"})
         .then(response => response.json())
         .then(parsedJSON => this.setState({comments: parsedJSON.content}))
         .catch(error => console.log(error));
