@@ -36,9 +36,9 @@ class App extends Component {
         .catch(error => console.log(error));
   }
 
-  shouldComponentUpdate(nextProps, nextState){
-     return ((this.state.articles !== nextState.articles) || (this.state.videosVisible !== nextState.videosVisible));
-   }
+  // shouldComponentUpdate(nextProps, nextState){
+  //    return ((this.state.articles !== nextState.articles) || (this.state.videosVisible !== nextState.videosVisible));
+  //  }
 
   filterArticles() {
     // this.setState({
@@ -48,22 +48,13 @@ class App extends Component {
 
   render() {
     const {articles} = this.state;
-    if(this.state.data !== null){
-      return (
-        <div className="App">
-          <ul>
-            {articles.map(article =>
-              <li key={article.contentId}>
-                <p>{article.metadata.headline}</p>
-              </li>
-            )}
-          </ul>
-          <Header/>
-          <SideNav filterArticles={this.filterArticles}/>
-          <News videosVisible={this.state.videosVisible} articleList={this.state.articles}/>
-        </div>
-      );
-    }
+    return (
+      <div className="App">
+        <Header/>
+        <SideNav filterArticles={this.filterArticles}/>
+        <News videosVisible={this.state.videosVisible}/>
+      </div>
+    );
   }
 }
 
