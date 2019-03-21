@@ -6,7 +6,7 @@ import logo from './logo.svg';
 import './App.css';
 import 'whatwg-fetch';
 
-const URL = '/content?startIndex=0&count=40';
+// const URL = '/content?startIndex=0&count=40';
 
 class App extends Component {
 
@@ -19,22 +19,22 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    this.fetchData();
-  // fetch(URL, {method: "GET"})
-  //   .then(response => response.json())
-  //   .then(data => this.setState({ articles: data.data }));
-  //   // .then(res => res.text())          // convert to plain text
-  //   // .then(text => alert(text))  // then log it out
-  //   // fetch(URL, {mode:"no-cors"})
-  }
+  // componentDidMount() {
+  //   this.fetchData();
+  // // fetch(URL, {method: "GET"})
+  // //   .then(response => response.json())
+  // //   .then(data => this.setState({ articles: data.data }));
+  // //   // .then(res => res.text())          // convert to plain text
+  // //   // .then(text => alert(text))  // then log it out
+  // //   // fetch(URL, {mode:"no-cors"})
+  // }
 
-  fetchData(){
-    return fetch(URL, {method: "GET"})
-        .then(response => response.json())
-        .then(parsedJSON => this.setState({articles: parsedJSON.data}))
-        .catch(error => console.log(error));
-  }
+  // fetchData(){
+  //   return fetch(URL, {method: "GET"})
+  //       .then(response => response.json())
+  //       .then(parsedJSON => this.setState({articles: parsedJSON.data}))
+  //       .catch(error => console.log(error));
+  // }
 
   // shouldComponentUpdate(nextProps, nextState){
   //    return ((this.state.articles !== nextState.articles) || (this.state.videosVisible !== nextState.videosVisible));
