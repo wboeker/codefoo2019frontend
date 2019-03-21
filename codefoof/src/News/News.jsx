@@ -11,19 +11,38 @@ class News extends Component{
     this.articleList = props.articleList;
 
     this.state = {
-      data: [{"name":"test1"},{"name":"test2"}],
       timeStamp: "timeStamp",
       title: "title",
       numComments: "4",
     }
   }
 
+  helper(){
+    debugger;
+    this.articleList.map((article) => {
+        return (
+          <Article image={this.state.test} time={this.state.timeStamp}
+          title={article.contentId} numComments={this.state.numComments}/>
+        );
+      }
+    );
+
+    // <Article image={this.state.test} time={this.state.timeStamp}
+    // title={this.articleList.contentId} numComments={this.state.numComments}/>
+    // <ul>
+    //   {this.articleList.map(article =>
+    //     <li key={article.contentId}>
+    //       <p>{article.metadata.headline}</p>
+    //     </li>
+    //   )}
+    // </ul>
+  }
+
   render(props){
       return(
             <div className="newsBox">
               <div className="listContainer">
-                 <Article image={this.state.test} time={this.state.timeStamp}
-                 title={this.articleList} numComments={this.state.numComments}/>
+                {this.helper()}
               </div>
             </div>
       )

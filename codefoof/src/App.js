@@ -20,17 +20,25 @@ class App extends Component {
   }
 
   componentDidMount() {
-  fetch(URL, {method: "GET"})
-    .then(response => response.json())
-    .then(data => this.setState({ articles: data.data }));
-    // .then(res => res.text())          // convert to plain text
-    // .then(text => alert(text))  // then log it out
-    // fetch(URL, {mode:"no-cors"})
+    this.fetchData();
+  // fetch(URL, {method: "GET"})
+  //   .then(response => response.json())
+  //   .then(data => this.setState({ articles: data.data }));
+  //   // .then(res => res.text())          // convert to plain text
+  //   // .then(text => alert(text))  // then log it out
+  //   // fetch(URL, {mode:"no-cors"})
   }
 
-  // shouldComponentUpdate(nextProps, nextState){
-  //    return ((this.state.articles !== nextState.articles) || (this.state.videosVisible !== nextState.videosVisible));
-  //  }
+  fetchData(){
+    return fetch(URL, {method: "GET"})
+        .then(response => response.json())
+        .then(parsedJSON => this.setState({articles: parsedJSON.data}))
+        .catch(error => console.log(error));
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+     return ((this.state.articles !== nextState.articles) || (this.state.videosVisible !== nextState.videosVisible));
+   }
 
   filterArticles() {
     // this.setState({

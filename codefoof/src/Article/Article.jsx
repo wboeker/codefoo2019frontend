@@ -30,4 +30,10 @@ class Article extends Component{
   }
 }
 
+//set parameter type
+Article.propTypes = {
+  title:PropTypes.string,
+}
+
+
 export default Article;
