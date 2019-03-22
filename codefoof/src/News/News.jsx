@@ -69,7 +69,7 @@ class News extends Component{
     return(
       <div>
           {articless.map((article,index) =>
-              <Article image={this.state.test} time={article.metadata.publishDate}
+              <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
               title={article.metadata.headline} numComments={article.numComments}/>
           )}
       </div>
