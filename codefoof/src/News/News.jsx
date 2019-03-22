@@ -66,6 +66,22 @@ class News extends Component{
     const {articles} = this.state;
     const {comments} = this.state;
     const articless = this.addtoArticles(articles,comments);
+    if(this.props.videosVisible){
+      return(
+        <div>
+            {articless.map((article,index) =>
+              {
+                if (article.contentType === "video"){
+                  return(
+                    <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
+                    title={article.metadata.headline} numComments={article.numComments}/>
+                  );
+                }
+              }
+            )}
+        </div>
+      );
+    }
     return(
       <div>
           {articless.map((article,index) =>
@@ -76,7 +92,7 @@ class News extends Component{
     );
   }
 
-  render(props){
+  render(){
       return(
             <div className="newsBox">
               <div className="listContainer">

@@ -41,9 +41,9 @@ class App extends Component {
   //  }
 
   filterArticles() {
-    // this.setState({
-    //   videosVisible: true;
-    // });
+    this.setState({
+      videosVisible: true,
+    });
   }
 
   render() {
