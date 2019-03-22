@@ -13,14 +13,14 @@ class Article extends Component{
     this.numComments = props.numComments;
   }
 
-  render(props){
+  render(){
       return(
         <div className="wrap">
           <div className="articleBox">
             <div className="pictureBox">
             </div>
             <div className="textBox">
-              <div className="topRight">time: {this.time} number of comments: {this.numComments}</div>
+              <div className="topRight">time: {this.time} number of comments: {this.props.numComments}</div>
               <div className="topRight">{this.title}</div>
             </div>
             <hr/>
@@ -33,6 +33,7 @@ class Article extends Component{
 //set parameter type
 Article.propTypes = {
   title:PropTypes.string,
+  numComments:PropTypes.string,
 }
 
 

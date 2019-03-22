@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Article from '../Article/Article';
 import SideNav from '../SideNav/SideNav';
 
-const URL = '/content?startIndex=0&count=20';
+const URL = '/content?startIndex=0&count=2';
 const COMMENT_URL = 'comments?ids=';
 
 class News extends Component{
@@ -54,31 +54,24 @@ class News extends Component{
 
   addtoArticles(articles,comments){
       if ((articles.length > 0) && (comments.length > 0)){
-        return articles.map((article, index) => {articles['numComments'] = comments[index].count});
-      }
-      debugger;
+        return articles.map((article, index) => {
+          article.numComments = comments[index].count;
+          return article;});
+        }
       return articles;
   }
 
   helper(){
     this.fetchComments();
-    var {articles} = this.state;
+    const {articles} = this.state;
     const {comments} = this.state;
-    articles = this.addtoArticles(articles,comments);
-    debugger;
+    const articless = this.addtoArticles(articles,comments);
     return(
       <div>
-        <div>
-            {comments.map((comment,index) =>
-                <p>{comments[index].count}</p>
-            )}
-        </div>
-        <div>
-            {articles.map((article,index) =>
-                <Article image={this.state.test} time={article.metadata.publishDate}
-                title={article.metadata.headline} numComments={this.state.test}/>
-            )}
-        </div>
+          {articless.map((article,index) =>
+              <Article image={this.state.test} time={article.metadata.publishDate}
+              title={article.metadata.headline} numComments={article.numComments}/>
+          )}
       </div>
     );
   }
