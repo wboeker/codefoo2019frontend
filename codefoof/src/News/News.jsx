@@ -52,21 +52,31 @@ class News extends Component{
         .catch(error => console.log(error));
   }
 
+  addtoArticles(articles,comments){
+      if ((articles.length > 0) && (comments.length > 0)){
+        return articles.map((article, index) => {articles['numComments'] = comments[index].count});
+      }
+      debugger;
+      return articles;
+  }
+
   helper(){
     this.fetchComments();
-    const {articles} = this.state;
+    var {articles} = this.state;
     const {comments} = this.state;
+    articles = this.addtoArticles(articles,comments);
+    debugger;
     return(
       <div>
         <div>
-            {articles.map(article =>
-                <Article image={this.state.test} time={article.metadata.publishDate}
-                title={article.metadata.headline} numComments={this.state.numComments}/>
+            {comments.map((comment,index) =>
+                <p>{comments[index].count}</p>
             )}
         </div>
         <div>
-            {comments.map(comment =>
-                <p>{comment.count}</p>
+            {articles.map((article,index) =>
+                <Article image={this.state.test} time={article.metadata.publishDate}
+                title={article.metadata.headline} numComments={this.state.test}/>
             )}
         </div>
       </div>
