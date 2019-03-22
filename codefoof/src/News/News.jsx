@@ -35,12 +35,11 @@ class News extends Component{
 
   createListId() {
     const {articles} = this.state;
-    const newList = [];
-    articles.map(article => newList.push(article.contentId));
+    var newList = articles.map(article => article.contentId);
     var strId = "";
     var index;
     for (index = 0; index < newList.length; index++) {
-      console.log(newList[index]);
+      strId += newList[index] + ",";
     }
     return strId;
   }
@@ -54,6 +53,7 @@ class News extends Component{
   }
 
   helper(){
+    this.fetchComments();
     const {articles} = this.state;
     const {comments} = this.state;
     return(
