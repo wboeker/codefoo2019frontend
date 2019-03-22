@@ -33,7 +33,6 @@ class Article extends Component{
   }
 
   render(){
-      debugger;
       return(
         <div className="wrap">
           <div className="articleBox">

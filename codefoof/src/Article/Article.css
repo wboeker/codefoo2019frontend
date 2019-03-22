@@ -1,12 +1,12 @@
 .wrap{
-  height: 130px;
+  height: 200px;
   width:100%;
   display: inline-block;
   float: left;
 }
 
 .articleBox {
-  height: 100px;
+  height: 172px;
   width: 100%;
   position:absolute;
   margin-bottom: 100px;
@@ -14,14 +14,14 @@
 }
 
 .pictureBox {
-  height: 100px;
+  height: 172px;
   width: 50%;
   background-color: red;
   display: inline-block;
 }
 
 .textBox {
-  height: 100px;
+  height: 172px;
   width: 50%;
   display: inline-block;
   background-color: green;
