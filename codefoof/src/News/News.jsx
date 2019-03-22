@@ -23,7 +23,7 @@ class News extends Component{
 
   componentDidMount() {
     this.fetchData();
-    this.fetchComments();
+    // this.fetchComments();
   }
 
   fetchData(){
@@ -37,7 +37,7 @@ class News extends Component{
     const {articles} = this.state;
     const newList = [];
     articles.map(article => newList.push(article.contentId));
-    var strId = "3de45473c5662f25453551a2e1cb4e6e,63a71f01cca67c9bbf5e7b6f091d551d";
+    var strId = "";
     var index;
     for (index = 0; index < newList.length; index++) {
       console.log(newList[index]);
