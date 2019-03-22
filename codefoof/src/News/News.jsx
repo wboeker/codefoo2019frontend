@@ -11,6 +11,7 @@ class News extends Component{
   constructor(props){
     super(props);
     this.videosVisible = props.videosVisible;
+    this.articlesVisible = props.articlesVisible;
 
     this.state = {
       articles: [],
@@ -66,12 +67,28 @@ class News extends Component{
     const {articles} = this.state;
     const {comments} = this.state;
     const articless = this.addtoArticles(articles,comments);
-    if(this.props.videosVisible){
+    if (this.props.videosVisible) {
       return(
         <div>
             {articless.map((article,index) =>
               {
                 if (article.contentType === "video"){
+                  return(
+                    <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
+                    title={article.metadata.headline} numComments={article.numComments}/>
+                  );
+                }
+              }
+            )}
+        </div>
+      );
+    }
+    else if (this.props.articlesVisible){
+      return(
+        <div>
+            {articless.map((article,index) =>
+              {
+                if (article.contentType === "article"){
                   return(
                     <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
                     title={article.metadata.headline} numComments={article.numComments}/>

@@ -6,13 +6,18 @@ class SideNav extends Component{
   constructor(props){
     super(props);
     this.helper = this.helper.bind(this);
+    this.helper2 = this.helper2.bind(this);
   }
 
   helper(){
     this.props.filterArticles();
   }
 
-  render(props){
+  helper2(){
+    this.props.filter();
+  }
+
+  render(){
       return(
         <div className="sidebar">
           <button className="latestBox" onClick={this.helper}>
@@ -21,7 +26,7 @@ class SideNav extends Component{
           <button className="videosBox" onClick={this.helper}>
             <p className="navButton">Videos</p>
           </button>
-          <button className="articlesBox" onClick={this.helper}>
+          <button className="articlesBox" onClick={this.helper2}>
             <p className="navButton">Articles</p>
           </button>
         </div>

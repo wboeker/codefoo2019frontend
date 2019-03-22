@@ -16,6 +16,7 @@ class App extends Component {
     this.state = {
       articles: [],
       videosVisible: false,
+      articlesVisible: false,
     }
   }
 
@@ -46,13 +47,19 @@ class App extends Component {
     });
   }
 
+  filter() {
+    this.setState({
+      articlesVisible: true,
+    });
+  }
+
   render() {
     const {articles} = this.state;
     return (
       <div className="App">
         <Header/>
-        <SideNav filterArticles={this.filterArticles}/>
-        <News videosVisible={this.state.videosVisible}/>
+        <SideNav filterArticles={this.filterArticles} filter={this.filter}/>
+        <News videosVisible={this.state.videosVisible} articlesVisible={this.state.articlesVisible}/>
       </div>
     );
   }
