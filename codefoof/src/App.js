@@ -13,6 +13,9 @@ class App extends Component {
   constructor(props){
     super(props);
     this.filterArticles = this.filterArticles.bind(this);
+    this.filterVideos = this.filterVideos.bind(this);
+    this.revert = this.revert.bind(this);
+
     this.state = {
       articles: [],
       videosVisible: false,
@@ -41,15 +44,24 @@ class App extends Component {
   //    return ((this.state.articles !== nextState.articles) || (this.state.videosVisible !== nextState.videosVisible));
   //  }
 
-  filterArticles() {
+  filterVideos() {
     this.setState({
       videosVisible: true,
+      articlesVisible: false,
     });
   }
 
-  filter() {
+  filterArticles() {
     this.setState({
       articlesVisible: true,
+      videosVisible: false,
+    });
+  }
+
+  revert() {
+    this.setState({
+      articlesVisible: false,
+      videosVisible: false,
     });
   }
 
@@ -58,7 +70,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header/>
-        <SideNav filterArticles={this.filterArticles} filter={this.filter}/>
+        <SideNav filterArticles={this.filterArticles} filterVideos={this.filterVideos} revert={this.revert}/>
         <News videosVisible={this.state.videosVisible} articlesVisible={this.state.articlesVisible}/>
       </div>
     );
