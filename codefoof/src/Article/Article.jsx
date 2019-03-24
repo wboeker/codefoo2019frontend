@@ -12,6 +12,8 @@ class Article extends Component{
     this.time = props.time;
     this.title = props.title;
     this.numComments = props.numComments;
+    this.videoTime = props.videoTime;
+    this.type = props.type;
   }
 
   constructDate() {
@@ -40,16 +42,41 @@ class Article extends Component{
     return withoutAgo;
     }
 
+  videoDuration(){
+    const timeInSeconds = this.props.videoTime;
+    var minutes = Math.floor(timeInSeconds / 60);
+    var seconds = timeInSeconds - minutes * 60;
+    // minutes = minutes.toString();
+    // seconds = seconds.toString();
+    const display = minutes + ":" + seconds;
+    if (this.props.type === "video") {
+      return display;
+    }
+    return null;
+  }
+
+  displayDuration(){
+    if (this.props.type === "video") {
+      return(
+        <div className="videoTime">
+          <div className="videoText"> {this.videoDuration()} </div>
+        </div>
+      );
+    }
+    return null;
+  }
+
   render(){
       return(
         <div className="wrap">
           <div className="articleBox">
             <div className="pictureBox">
               <img src={this.props.image}/>
+              {this.displayDuration()}
             </div>
             <div className="textBox">
-              <div className="topRight">time: {this.constructDate()} number of comments: {this.props.numComments}</div>
-              <div className="topRight">{this.title}</div>
+              <div className="topRight dateComments">{this.constructDate()} - {this.props.numComments}</div>
+              <div className="topRight title">{this.title}</div>
             </div>
             <hr/>
           </div>

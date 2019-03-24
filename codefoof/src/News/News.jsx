@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Article from '../Article/Article';
 import SideNav from '../SideNav/SideNav';
 
-const URL = '/content?startIndex=0&count=5';
+const URL = '/content?startIndex=0&count=20';
 const COMMENT_URL = 'comments?ids=';
 
 class News extends Component{
@@ -75,7 +75,8 @@ class News extends Component{
                 if (article.contentType === "video"){
                   return(
                     <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
-                    title={article.metadata.headline} numComments={article.numComments}/>
+                    title={article.metadata.headline} numComments={article.numComments} videoTime={article.metadata.duration}
+                    type={article.contentType}/>
                   );
                 }
               }
@@ -91,7 +92,8 @@ class News extends Component{
                 if (article.contentType === "article"){
                   return(
                     <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
-                    title={article.metadata.headline} numComments={article.numComments}/>
+                    title={article.metadata.headline} numComments={article.numComments} videoTime={article.metadata.duration}
+                    type={article.contentType}/>
                   );
                 }
               }
@@ -103,7 +105,8 @@ class News extends Component{
       <div>
           {articless.map((article,index) =>
               <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
-              title={article.metadata.headline} numComments={article.numComments}/>
+              title={article.metadata.headline} numComments={article.numComments} videoTime={article.metadata.duration}
+              type={article.contentType}/>
           )}
       </div>
     );
