@@ -10,3 +10,12 @@
   height: 100%;
   width: 100%;
 }
+
+@media(min-width:961px) {
+  .newsBox{
+    display: block;
+  }
+  p{
+    color:red;
+  }
+}

@@ -28,6 +28,31 @@
   background-color: white;
 }
 
+@media(min-width:600px) {
+  .articleBox {
+    height: 172px;
+    width: 100%;
+    position:absolute;
+    margin-bottom: 100px;
+    padding:10px 10px 38px 34px;
+  }
+
+  .pictureBox {
+    height: 172px;
+    width: 306px;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+  }
+
+  .textBox {
+    height: 172px;
+    width: 306px;
+    display: inline-block;
+    background-color: white;
+  }
+}
+
 .topRight {
   position: relative;
   float: left;
