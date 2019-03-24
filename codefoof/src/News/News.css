@@ -11,11 +11,9 @@
   width: 100%;
 }
 
-@media(min-width:800px) {
+@media(max-width:961px) {
   .newsBox{
-    display: block;
-  }
-  p{
-    color:red;
+    float:none;
+    margin-top: 50px;
   }
 }

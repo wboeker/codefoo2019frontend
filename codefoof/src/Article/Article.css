@@ -16,7 +16,7 @@
 .pictureBox {
   height: 172px;
   width: 306px;
-  background-color: red;
+  background-color: white;
   display: inline-block;
   position: relative;
 }
@@ -26,31 +26,6 @@
   width: 306px;
   display: inline-block;
   background-color: white;
-}
-
-@media(min-width:600px) {
-  .articleBox {
-    height: 172px;
-    width: 100%;
-    position:absolute;
-    margin-bottom: 100px;
-    padding:10px 10px 38px 34px;
-  }
-
-  .pictureBox {
-    height: 172px;
-    width: 306px;
-    background-color: red;
-    display: inline-block;
-    position: relative;
-  }
-
-  .textBox {
-    height: 172px;
-    width: 306px;
-    display: inline-block;
-    background-color: white;
-  }
 }
 
 .topRight {
@@ -104,3 +79,61 @@
 .chatIcon {
   float: left;
 }
+
+@media(max-width:500px) {
+
+  .articleBox {
+    height: 172px;
+    width: 100%;
+    position:absolute;
+    margin-bottom: 100px;
+    margin-left: 0px;
+    padding:10px 10px 38px 0px;
+  }
+
+  }
+
+  @media(min-width:601px) and (max-width:961px) {
+
+    .articleBox {
+      height: 172px;
+      width: 100%;
+      position:absolute;
+      margin-bottom: 100px;
+      margin-left: 18%;
+      padding:10px 10px 38px 45px;
+    }
+
+    }
+
+@media(max-width:961px) {
+
+  .wrap{
+    height: 400px;
+    width:100%;
+    display: block;
+    float: left;
+  }
+
+  .pictureBox {
+    height: 172px;
+    width: 306px;
+    background-color: white;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .textBox {
+    height: 172px;
+    width: 306px;
+    display: block;
+    background-color: white;
+  }
+
+  .articleLine {
+    width: 306px;
+    float: left;
+  }
+
+  }

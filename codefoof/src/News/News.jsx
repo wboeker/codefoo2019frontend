@@ -127,7 +127,6 @@ class News extends Component{
       return(
             <div className="newsBox">
               <div className="listContainer">
-                <p> test </p>
                 {this.helper()}
               </div>
             </div>
