@@ -75,7 +75,7 @@ class News extends Component{
                 if (article.contentType === "video"){
                   return(
                     <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
-                    title={article.metadata.headline} numComments={article.numComments} videoTime={article.metadata.duration}
+                    title={article.metadata.title} numComments={article.numComments} videoTime={article.metadata.duration}
                     type={article.contentType}/>
                   );
                 }
@@ -104,9 +104,20 @@ class News extends Component{
     return(
       <div>
           {articless.map((article,index) =>
-              <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
-              title={article.metadata.headline} numComments={article.numComments} videoTime={article.metadata.duration}
-              type={article.contentType}/>
+            {
+              if (article.contentType === "article"){
+                return(
+                  <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
+                  title={article.metadata.headline} numComments={article.numComments} videoTime={article.metadata.duration}
+                  type={article.contentType}/>
+                );
+              return(
+                <Article image={article.thumbnails[0].url} time={article.metadata.publishDate}
+                title={article.metadata.title} numComments={article.numComments} videoTime={article.metadata.duration}
+                type={article.contentType}/>
+              );
+              }
+            }
           )}
       </div>
     );
