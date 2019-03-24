@@ -37,6 +37,7 @@
 .title {
   font-weight: bold;
   text-align: left;
+  vertical-align: middle;
 }
 
 .dateComments {
@@ -72,5 +73,9 @@
   margin-top: 2px;
   margin-left: 2px;
   display: inline-block;
+  float: left;
+}
+
+.chatIcon {
   float: left;
 }
