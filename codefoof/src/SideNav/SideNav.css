@@ -19,13 +19,22 @@
   color: gray;
   font-size: 18px;
   font-weight: bold;
+  float:left;
 }
 
 .latestBox:hover, .videosBox:hover, .articlesBox:hover{
   background-color: #B51012;
 }
 
-.navButton:hover{
+.latestBox:hover .navButton{
+  color:white;
+}
+
+.videosBox:hover .navButton{
+  color:white;
+}
+
+.articlesBox:hover .navButton{
   color:white;
 }
 
@@ -33,4 +42,25 @@ p {
   margin: 0;
   padding: 0;
   line-height:50px;
+}
+
+.icon {
+  display: inline-block;
+  float: left;
+  margin-top: 5%;
+  margin-left: 18%;
+  margin-right: 2%;
+}
+
+
+.latestBox:hover .pathFill {
+   fill: white;
+}
+
+.videosBox:hover .pathFill {
+   fill: white;
+}
+
+.articlesBox:hover .pathFill {
+   fill: white;
 }
