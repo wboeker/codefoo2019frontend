@@ -46,6 +46,9 @@ class Article extends Component{
     const timeInSeconds = this.props.videoTime;
     var minutes = Math.floor(timeInSeconds / 60);
     var seconds = timeInSeconds - minutes * 60;
+    if (seconds < 10) {
+      seconds += "0";
+    }
     // minutes = minutes.toString();
     // seconds = seconds.toString();
     const display = minutes + ":" + seconds;
