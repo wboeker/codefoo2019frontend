@@ -15,14 +15,14 @@
 
 .pictureBox {
   height: 172px;
-  width: 50%;
+  width: 306px;
   background-color: red;
   display: inline-block;
 }
 
 .textBox {
   height: 172px;
-  width: 50%;
+  width: 306px;
   display: inline-block;
   background-color: green;
 }

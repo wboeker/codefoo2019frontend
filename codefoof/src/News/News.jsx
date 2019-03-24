@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Article from '../Article/Article';
 import SideNav from '../SideNav/SideNav';
 
-const URL = '/content?startIndex=0&count=2';
+const URL = '/content?startIndex=0&count=5';
 const COMMENT_URL = 'comments?ids=';
 
 class News extends Component{

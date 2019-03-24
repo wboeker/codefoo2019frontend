@@ -5,6 +5,7 @@
   "proxy": "https://ign-apis.herokuapp.com",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
+    "moment": "^2.24.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8",
