@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "https://ign-apis.herokuapp.com",
-  "homepage":"https://wboeker.github.io/codefoo2019frontend",
+  "homepage":"https://wboeker.github.io/codefoo2019frontend/",
   "dependencies": {
     "@trendmicro/react-sidenav": "^0.4.5",
     "gh-pages": "^2.0.1",
